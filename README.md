@@ -11,3 +11,8 @@ We provide an amazing platform to the tech enthusiasts to showcase their amazing
 ## History
 
 2023 : InterHacktive s1
+
+## Tech Specifications
+
+1. Using `yarn` instead of `npm`.
+2. Open source contributions welcome ig?
