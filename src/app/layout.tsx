@@ -2,6 +2,7 @@ import ClientProvider from "@/context/ClientProvider";
 import "../styles/globals.css";
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
+import { twMerge } from "tailwind-merge";
 
 const nunito = Nunito_Sans({ subsets: ["latin"] });
 
@@ -43,9 +44,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <ClientProvider>
-                <body className={nunito.className}>{children}</body>
-            </ClientProvider>
+            <body className={twMerge(nunito.className, "bg-theme-background")}>
+                <ClientProvider>{children}</ClientProvider>
+            </body>
         </html>
     );
 }

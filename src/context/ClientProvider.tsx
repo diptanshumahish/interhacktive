@@ -1,3 +1,4 @@
+"use client";
 import StateProvider from "@/state-management/Provider";
 import { UserState } from "@/state-management/store/user.store";
 import { setCookie } from "cookies-next";
