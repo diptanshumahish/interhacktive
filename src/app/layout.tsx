@@ -1,13 +1,15 @@
 import ClientProvider from "@/context/ClientProvider";
 import "../styles/globals.css";
 import type { Metadata } from "next";
-import { Nunito_Sans } from "next/font/google";
+import { Karla } from "next/font/google";
 import { twMerge } from "tailwind-merge";
+import Navbar from "@/components/Navigation/Navbar";
 
-const nunito = Nunito_Sans({ subsets: ["latin"] });
+const nunito = Karla({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "InterHacktive",
+
     description:
         "The official website for the Hackathon by Students' Chapter CSE",
     authors: { name: "Students' Chapter CSE", url: "sccseaot.com" },
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
     themeColor: "#FC2121",
     robots: { index: true, follow: true },
     category: "Event Page",
-    icons: "https://img.playbook.com/TkyepctQsL8DmxR_YAhu7gRTjXpL9CIFSA9Ph_9Hys8/Z3M6Ly9wbGF5Ym9v/ay1hc3NldHMtcHVi/bGljL2RlMzBiOWIx/LTgwMGItNGQ2OS1h/ODRiLWM2MWQyOTgx/ZGIzZg",
+    icons: ["/favicon.ico"],
 };
 
 export default function RootLayout({
@@ -45,7 +47,10 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={twMerge(nunito.className, "bg-theme-background")}>
-                <ClientProvider>{children}</ClientProvider>
+                <ClientProvider>
+                    <Navbar />
+                    {children}
+                </ClientProvider>
             </body>
         </html>
     );

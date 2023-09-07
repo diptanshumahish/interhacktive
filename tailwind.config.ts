@@ -8,8 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        marquee: "marquee var(--duration) linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-50% - var(--gap)/2))" },
+        },
+      },
       colors:{
-        "theme-background":"#111111"
+        "theme-background":"#111111",
+        "theme-main":"#FC2E21"
       }
     },
   },
