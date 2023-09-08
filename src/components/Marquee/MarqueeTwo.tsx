@@ -24,16 +24,20 @@ export default function MarqueeHomeTwo() {
             className="flex gap-4 opacity-20"
             gradient={true}
             gradientColor={[17, 17, 17]}
+            direction="right"
             speed={90}
         >
             {BackgroundImages.map((ele, idx) => {
                 return (
                     <Image
+                        key={idx}
                         src={ele}
                         alt={ele}
                         height={300}
                         width={400}
-                        className="m-8 rounded-lg "
+                        className="m-8 rounded-lg xl:w-[400px] lg:w-[350px] h-auto md:w-[300px] w-[200px]  "
+                        placeholder="blur"
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8P5GhHgAGOAIRSvoJaQAAAABJRU5ErkJggg=="
                     />
                 );
             })}
