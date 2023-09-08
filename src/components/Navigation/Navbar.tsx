@@ -17,7 +17,7 @@ export default function Navbar() {
                 height={40}
                 width={100}
             />
-            <div className="flex gap-6 text-lg">
+            <div className="md:flex gap-6 text-lg hidden">
                 <Link
                     href="/"
                     className={twMerge(
