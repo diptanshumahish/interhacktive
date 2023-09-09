@@ -10,7 +10,7 @@ export default function Navbar() {
     const params = usePathname();
     const { user } = useUser();
     return (
-        <div className="text-white top-0 left-0 right-0 bg-transparent absolute px-[5%] py-4 flex justify-between items-center z-10 ">
+        <div className="text-white  top-0 left-0 right-0 bg-transparent fixed px-[5%] py-4 flex justify-between items-center z-10 ">
             <Image
                 src="/interhacktive.svg"
                 alt="Interhacktive Logo"
@@ -39,7 +39,7 @@ export default function Navbar() {
                     Projects
                 </Link>
                 <Link
-                    href="/"
+                    href="/gallery"
                     className={twMerge(
                         params === "/gallery"
                             ? "text-theme-main border-b-2 border-theme-main transition-transform"

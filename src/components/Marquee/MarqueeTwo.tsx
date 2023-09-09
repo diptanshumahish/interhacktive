@@ -20,7 +20,6 @@ const BackgroundImages: string[] = [
 export default function MarqueeHomeTwo() {
     return (
         <Marquee
-            delay={0.9}
             className="flex gap-4 opacity-20"
             gradient={true}
             gradientColor={[17, 17, 17]}

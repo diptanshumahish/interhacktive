@@ -65,7 +65,7 @@ export default function Header() {
                                 </Link>
                                 <Link
                                     className="border  text-white p-2 px-4 rounded-full flex items-center gap-2 md:text-lg text-sm"
-                                    href="/"
+                                    href="/projects"
                                 >
                                     Check out Projects
                                     <Target />
